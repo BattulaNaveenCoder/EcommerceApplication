@@ -22,13 +22,12 @@ namespace Models.Model
         {
             CartItems =new List<CartItems>();
             OrderLines = new List<OrderLines>();
-            Tags=new List<string>();
+            Tags=new List<Tag>();
         }
 
         #region Properties
         [Key]
         [Column(TypeName = "INT")]
-        [StringLength(IDLENGTH)]
         public int ProductId { get; set; }
 
         [Column(TypeName = "VARCHAR")]
@@ -46,7 +45,7 @@ namespace Models.Model
         public decimal Price { get;set; }
         public DiscountType DiscountType { get; set; }
         public decimal DiscountValue { get; set; }
-        public List<string> Tags { get; set; }
+        public List<Tag> Tags { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 

@@ -22,7 +22,6 @@ namespace Models.Model
 
         [Key]
         [Column(TypeName = "INT")]
-        [StringLength(IDLENGTH)]
         public int CartId { get;set; }
 
         [Required]

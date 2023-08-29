@@ -17,7 +17,6 @@ namespace Models.Model
         #endregion
         [Key]
         [Column(TypeName = "INT")]
-        [StringLength(IDLENGTH)]
         public int ReviewId { get;set; }
         public int Rating { get; set; }
 
@@ -30,6 +29,11 @@ namespace Models.Model
         [ForeignKey("FkUserId")]
         public Users Users { get; set; }
         public int FkUserId { get; set; }
+
+
+        [ForeignKey("FkProductId")]
+        public Products Products  { get; set; }
+        public int FkProductId { get; set; }
 
 
     }

@@ -19,7 +19,6 @@ namespace Models.Model
 
         [Key]
         [Column(TypeName = "INT")]
-        [StringLength(IDLENGTH)]
         public int OrderLineId { get;set; }
 
         [Column(TypeName = "VARCHAR")]

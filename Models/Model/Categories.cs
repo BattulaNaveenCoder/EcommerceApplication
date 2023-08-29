@@ -20,12 +20,11 @@ namespace Models.Model
         public Categories() 
         {
             Products =new List<Products>();
-            Tags = new List<string>();      
+            Tags = new List<Tag>();      
         }
 
         [Key]
         [Column(TypeName = "INT")]
-        [StringLength(IDLENGTH)]
         public int CategoryId { get; set; }
 
         [Column(TypeName = "VARCHAR")]
@@ -35,18 +34,20 @@ namespace Models.Model
         [Column(TypeName = "VARCHAR")]
         [StringLength(DESCRIPTIONLENTH)]
         public string Description { get; set; }
-        public List<string> Tags { get; set; }
+        public List<Tag> Tags { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime UpdateAt { get; set; }
-
-        [ForeignKey("FkCategoryId")]
-        public Categories Category { get; set; }
-        public int FkCategoryId { get; set; }
+        public DateTime UpdateAt { get; set; }       
 
 
         [InverseProperty("Categories")]
         public IList<Products> Products { get; set; }
 
 
+    }
+    public class Tag
+    {
+        public int TagId { get; set; }
+        public string Name { get; set; }
+        // Other properties if needed
     }
 }

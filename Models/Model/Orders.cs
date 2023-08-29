@@ -16,7 +16,6 @@ namespace Models.Model
         #endregion
         [Key]
         [Column(TypeName = "INT")]
-        [StringLength(IDLENGTH)]
         public int OrderIf { get;set; }
         public DateTime CreatedAt { get; set; }
 
