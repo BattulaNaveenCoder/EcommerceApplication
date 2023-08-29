@@ -17,7 +17,6 @@ namespace Models.Model
         #endregion
         [Key]
         [Column(TypeName = "INT")]
-        [StringLength(IDLENGTH)]
         public int CartId { get; set; }
 
         [Column(TypeName = "VARCHAR")]

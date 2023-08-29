@@ -20,8 +20,7 @@ namespace Models.Model
 
         #region Properties
         [Key]
-        [Column(TypeName = "INT")]
-        [StringLength(IDLENGTH)]
+        [Column(TypeName = "INT")]       
         public int SocialProfileId { get; set; }
 
         [Required]
